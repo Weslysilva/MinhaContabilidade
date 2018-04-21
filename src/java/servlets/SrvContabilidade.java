@@ -77,8 +77,6 @@ public class SrvContabilidade extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-
-            
     
     private void execute(HttpServletRequest request, HttpServletResponse response) throws IOException{
 
@@ -125,12 +123,12 @@ public class SrvContabilidade extends HttpServlet {
         
            
           conta = gson.fromJson(request.getParameter("conta"), Conta.class);
-               
+          response.getWriter().print(gc.remove(conta));
             
         }
     }
 
-}
+}   
 
 
 

@@ -3,10 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/wesly/NetBeansProjects/MORREU_2/src/java/servlets/SrvContabilidade.java</file>
-            <file>file:/home/wesly/NetBeansProjects/MORREU_2/web/cadastro/conta.html</file>
-            <file>file:/home/wesly/NetBeansProjects/MORREU_2/web/style.css</file>
-            <file>file:/home/wesly/NetBeansProjects/MORREU_2/web/cadastro/conta.js</file>
+            <file>file:/home/nostradamus/NetBeansProjects/MinhaContabilidade/web/cadastro/conta.html</file>
+            <file>file:/home/nostradamus/NetBeansProjects/MinhaContabilidade/web/cadastro/conta.js</file>
+            <file>file:/home/nostradamus/NetBeansProjects/MinhaContabilidade/src/java/servlets/SrvContabilidade.java</file>
         </group>
     </open-files>
 </project-private>
