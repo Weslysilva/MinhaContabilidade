@@ -29,10 +29,10 @@ public class GerenciaConta {
     
     public boolean remove(Conta conta){
         if (this.conta.contains(conta)) {
-            return false;            
-        }else{
             this.conta.remove(conta);
-            return true;
+            return true;            
+        }else{
+            return false;
         }
     }
     

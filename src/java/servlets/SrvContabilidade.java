@@ -123,6 +123,7 @@ public class SrvContabilidade extends HttpServlet {
         
            
           conta = gson.fromJson(request.getParameter("conta"), Conta.class);
+          
           response.getWriter().print(gc.remove(conta));
             
         }
