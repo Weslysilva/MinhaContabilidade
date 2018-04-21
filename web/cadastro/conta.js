@@ -36,11 +36,18 @@ function addConta(){
     
 }
 
-
-
 function remConta(conta){
     
-    $.get("")
+    $.get("SrvContabilidade/remConta?conta="+JSON.stringify(conta), function( resposta ) {
+
+           if(resposta === "true"){
+               
+                  alerta("CADASTRO DE CONTA","CONTA CADASTRADA COM SUCESSO!");
+                  getListaConta();
+               
+           }
+           
+    });
     
     
     
@@ -57,8 +64,7 @@ function getListaConta(){
             document.getElementById("tabelaContas").innerHTML = "";
             
             var lista = JSON.parse(resposta);
-                
-                
+            
                 var tabela = document.createElement("table");
                     tabela.setAttribute("slyte","width: 100%");
                     tabela.setAttribute("border","1");
@@ -95,41 +101,51 @@ function getListaConta(){
         
         
             for (var i = 0; i < lista.length; i++) {
-
+                
                 var linha = document.createElement("tr");
                 
                     var col1 = document.createElement("td");
                         col1.setAttribute("style","width: 20%");
+                        col1.setAttribute("style","text-align:center");
+                        col1.setAttribute("id",lista[i].apelido);
                         col1.innerHTML = lista[i].apelido;
                     
                     
                     var col2 = document.createElement("td");
                         col2.setAttribute("style","width: 20%");
+                        col2.setAttribute("style","text-align:center");
+                        col2.setAttribute("id",lista[i].agencia);
                         col2.innerHTML = lista[i].agencia;
                     
                         
                     var col3 = document.createElement("td");
                         col3.setAttribute("style","width: 20%");
+                        col3.setAttribute("style","text-align:center");
+                        col3.setAttribute("id",lista[i].conta);
                         col3.innerHTML = lista[i].conta;
-                    
                         
                     var col4 = document.createElement("td");
                         col4.setAttribute("style","width: 20%");
+                        col4.setAttribute("style","text-align:center");
+                        col4.setAttribute("id",lista[i].banco);
                         col4.innerHTML = lista[i].banco;
                     
                     var col5 = document.createElement("td");
-                        col4.setAttribute("style","width: 20%");
+                        col5.setAttribute("style","width: 20%");
+                        col5.setAttribute("style","text-align:center");
+                        
                     
                     var btnRemover = document.createElement("button");
-                        btnRemover.setAttribute("id",lista[i].conta);
-                        btnRemover.setAttribute("onclick","remConta("+lista[i].conta+")");
+                        btnRemover.setAttribute("onclick","remConta(" + conta +")");
+                        btnRemover.setAttribute("style","align-items: center");
                         btnRemover.innerHTML = "Remover item";
                     
                     linha.appendChild(col1);
                     linha.appendChild(col2);
                     linha.appendChild(col3);
                     linha.appendChild(col4);
-                    linha.appendChild(btnRemover);
+                    linha.appendChild(col5);
+                    col5.appendChild(btnRemover);
 
                     tabela.appendChild(linha);
             }
