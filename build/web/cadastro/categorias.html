@@ -1,93 +1,143 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US"><head><!-- Created by Artisteer v4.3.0.60745 -->
-    <meta charset="utf-8">
-    <title>Categorias</title>
-    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+<html dir="ltr" lang="en-US">
+    <head><!-- Created by Artisteer v4.3.0.60745 -->
+        <meta charset="utf-8">
+        <title>Categorias</title>
+        <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
 
-    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <link rel="stylesheet" href="../style.css" media="screen">
-    <!--[if lte IE 7]><link rel="stylesheet" href="../style.ie7.css" media="screen" /><![endif]-->
-    <link rel="stylesheet" href="../style.responsive.css" media="all">
-
-
-    <script src="../jquery.js"></script>
-    <script src="../script.js"></script>
-    <script src="../script.responsive.js"></script>
+        <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        <link rel="stylesheet" href="../style.css" media="screen">
+        <!--[if lte IE 7]><link rel="stylesheet" href="../style.ie7.css" media="screen" /><![endif]-->
+        <link rel="stylesheet" href="../style.responsive.css" media="all">
 
 
-</head>
-<body>
-<div id="art-main">
-    <div class="art-sheet clearfix">
-<header class="art-header">
+        <script src="jquery.js"></script>
+        <script src="../script.js"></script>
+        <script src="../rodape.js"></script>
+        <script src="../script.responsive.js"></script>
+        <script type="text/javascript" src="../alerta.js"></script>
+        <script type="text/javascript" src="../login.js"></script>
+        <script type="text/javascript" src="../security.js"></script>
+        <script type="text/javascript" src="../includeHTML.js"></script>
+    </head>
 
-    <div class="art-shapes">
+    <body>
+        <div id="art-main">
+            <div class="art-sheet clearfix">
+                <header class="art-header">
+                    <div class="art-shapes"></div>
+                    <h1 class="art-headline"><a href="/">Minha Contabilidade</a></h1>
+                    <h2 id="slogan" class="art-slogan"></h2>
+                    <nav class="art-nav">
+                        <ul class="art-hmenu">
+                            <li><a href="../dashboard.html" class="">Dashboard</a></li>
+                            <li><a href="../cadastro.html" class="active">Cadastro</a>
+                                <ul class="active">
+                                    <li><a href="../cadastro/conta.html" class="">Conta</a></li>
+                                    <li><a href="../cadastro/receitas.html" class="">Receitas</a></li>
+                                    <li><a href="../cadastro/despesas.html" class="">Despesas</a></li>
+                                    <li><a href="../cadastro/categorias.html" class="active">Categorias</a></li>
+                                    <li><a href="../cadastro/usuarios.html">Usuarios</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../relatorios.html">Relatorios</a>
+                                <ul>
+                                    <li><a href="../relatorios/receitas.html">Receitas</a>
+                                        <ul>
+                                            <li><a href="../relatorios/receitas/ultimos-30-dias.html">Ultimos 30 dias</a></li>
+                                            <li><a href="../relatorios/receitas/receitas-ultimos-60-dias.html">Receitas -&gt; Ultimos 60 dias</a></li>
+                                            <li><a href="../relatorios/receitas/receitas-personalizado.html">Receitas -&gt; Personalizado</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="../relatorios/despesas.html">Despesas</a>
+                                            <ul><li><a href="../relatorios/despesas/ultimos-30-dias.html">Ultimos 30 dias</a></li>
+                                                <li><a href="../relatorios/despesas/ultimos-60-dias.html">Ultimos 60 dias</a></li>
+                                                <li><a href="../relatorios/despesas/personalizado.html">Personalizado</a></li>
+                                            </ul>
+                                    </li>
+                                    <li><a href="../relatorios/receitas-e-despesas.html">Receitas e Despesas</a></li>
+                                    <li><a href="../relatorios/analitico.html">Analitico</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../login.html">Login</a></li>
+                        </ul> 
+                    </nav>
+                </header>
+                <div class="art-layout-wrapper">
+                    <div class="art-content-layout">
+                        <div class="art-content-layout-row">
+                            <div class="art-layout-cell art-content"><article class="art-post art-article">
+                                    <h2 class="art-postheader">Categorias</h2>
+
+                                    <div class="art-postcontent art-postcontent-0 clearfix"><div class="art-content-layout">
+                                            <div class="art-content-layout-row">
+                                                <div class="art-layout-cell" style="width: 34%" >
+                                                        
+                                                        <p><span style="font-weight: bold;">Data</span> <input id="data" type="text"></p>
+                                                        <p>Nome<input id="nome" type="text"></p>
+                                                    </div>
+                                                    <div class="art-layout-cell" style="width: 2%" ></div>
+                                                    <div class="art-layout-cell" style="width: 34%" >
         
-            </div>
+                                                        
+                                                        <p>Categoria<input id="categoria" type="text"></p>
+        
+                                                        <p>Conta<input id="conta"  type="text"><br></p>
+        
+                                                        
+                                                        <p><br></p>
+                                                        <button class="art-button" onclick="addConta()">Add</button>
+                                                        <a href="" class="art-button">Edit</a>&nbsp;
+                                                        <a href="" class="art-button">Del</a>&nbsp;
 
-<h1 class="art-headline">
-    <a href="/">Minha Contabilidade</a>
-</h1>
-<h2 class="art-slogan">Seja Bem vindo, $username</h2>
+  
+                                                    </div>
+                                                    <div class="art-layout-cell" style="width: 2%" ></div>
+                                                    <div class="art-layout-cell" style="width: 33%" >
+        
+                                                        <p style="text-align: right;">
+                                                            <p>Valor <input id="valor"  type="text"><br></p>
+        
+                                                        
+                                                        
+                                                        <p style="text-align: center;">
+            
+                                                        
+                                                        <p style="text-align: -webkit-auto;">&nbsp;
+            
+                                                        
+                
+                                                        <span style="color: rgb(0, 0, 0); line-height: normal;"><br></span></p>
+   
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="art-content-layout">
+                                            <div class="art-content-layout-row">
+                                                <div class="art-layout-cell" style="width: 100%" >
+                                                    <p style="text-align: center;"><span style="font-weight: bold;">Categorias:</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="art-content-layout">
+                                            <div class="art-content-layout-row">
+                                                <div class="art-layout-cell" style="width: 100%" >
+                                                    <table class="art-article" style="width: 100%; "><tbody><tr><td style="width: 20%; "><br></td><td style="width: 20%; "><br></td><td style="width: 20%; "><br></td><td style="width: 20%; "><br></td><td style="width: 20%; "><br></td></tr></tbody></table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
-
-
-
-<nav class="art-nav">
-    <ul class="art-hmenu"><li><a href="../dashboard.html" class="">Dashboard</a></li><li><a href="../cadastro.html" class="active">Cadastro</a><ul class="active"><li><a href="../cadastro/conta.html" class="">Conta</a></li><li><a href="../cadastro/receitas.html" class="">Receitas</a></li><li><a href="../cadastro/despesas.html" class="">Despesas</a></li><li><a href="../cadastro/categorias.html" class="active">Categorias</a></li><li><a href="../cadastro/usuarios.html">Usuarios</a></li></ul></li><li><a href="../relatorios.html">Relatorios</a><ul><li><a href="../relatorios/receitas.html">Receitas</a><ul><li><a href="../relatorios/receitas/ultimos-30-dias.html">Ultimos 30 dias</a></li><li><a href="../relatorios/receitas/receitas-ultimos-60-dias.html">Receitas -&gt; Ultimos 60 dias</a></li><li><a href="../relatorios/receitas/receitas-personalizado.html">Receitas -&gt; Personalizado</a></li></ul></li><li><a href="../relatorios/despesas.html">Despesas</a><ul><li><a href="../relatorios/despesas/ultimos-30-dias.html">Ultimos 30 dias</a></li><li><a href="../relatorios/despesas/ultimos-60-dias.html">Ultimos 60 dias</a></li><li><a href="../relatorios/despesas/personalizado.html">Personalizado</a></li></ul></li><li><a href="../relatorios/receitas-e-despesas.html">Receitas e Despesas</a></li><li><a href="../relatorios/analitico.html">Analitico</a></li></ul></li><li><a href="../login.html">Login</a></li></ul> 
-    </nav>
-
-                    
-</header>
-<div class="art-layout-wrapper">
-                <div class="art-content-layout">
-                    <div class="art-content-layout-row">
-                        <div class="art-layout-cell art-content"><article class="art-post art-article">
-                                <h2 class="art-postheader">Categorias</h2>
-                                                
-                <div class="art-postcontent art-postcontent-0 clearfix"><div class="art-content-layout">
-    <div class="art-content-layout-row">
-    <div class="art-layout-cell" style="width: 100%" >
-        <p>Formulario</p>
-    </div>
-    </div>
-</div>
-<div class="art-content-layout">
-    <div class="art-content-layout-row">
-    <div class="art-layout-cell" style="width: 100%" >
-        <p style="text-align: center;"><span style="font-weight: bold;">Categorias:</span></p>
-    </div>
-    </div>
-</div>
-<div class="art-content-layout">
-    <div class="art-content-layout-row">
-    <div class="art-layout-cell" style="width: 100%" >
-        <table class="art-article" style="width: 100%; "><tbody><tr><td style="width: 20%; "><br></td><td style="width: 20%; "><br></td><td style="width: 20%; "><br></td><td style="width: 20%; "><br></td><td style="width: 20%; "><br></td></tr></tbody></table>
-    </div>
-    </div>
-</div>
-</div>
-
-
-</article></div>
+                                </article></div>
+                        </div>
                     </div>
                 </div>
+                <script>    
+                    verificalogado(); 
+                    criaRodape(); 
+                </script>
             </div>
-                <footer class="art-footer">
-                                    <p class="art-page-footer">
-                                        <span id="art-footnote-links"> Desenvolvedores </span>
-                                        <span id="art-footnote-links"><a href="https://www.linkedin.com/in/wesly-silva∴-4251288b" target="_blank">Wesly Silva</a>,</span>
-                                        <span id="art-footnote-links"><a href="https://www.linkedin.com/in/" target="_blank">Moises Farias</a></span>
-                                    </p>
-                                     <p>Copyright © 2018. All Rights Reserved.</p>
-                </footer>
-
-    </div>
-    <p class="art-page-footer">
-        <span id="art-footnote-links"><a href="http://www.artisteer.com/" target="_blank">Web Template</a> created with Artisteer.</span>
-    </p>
-</div>
-
-
-</body></html>
+        </div>
+    </body>
+</html>
