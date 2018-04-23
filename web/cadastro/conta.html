@@ -10,15 +10,16 @@
         <!--[if lte IE 7]><link rel="stylesheet" href="../style.ie7.css" media="screen" /><![endif]-->
         <link rel="stylesheet" href="../style.responsive.css" media="all">
 
-
         <script src="conta.js"></script>
         <script src="../jquery.js"></script>
         <script src="../script.js"></script>
+        <script src="../rodape.js"></script>
         <script src="../script.responsive.js"></script>
         <script type="text/javascript" src="../alerta.js"></script>
         <script type="text/javascript" src="../login.js"></script>
         <script type="text/javascript" src="../security.js"></script>
         <script type="text/javascript" src="../includeHTML.js"></script>
+        
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -36,14 +37,12 @@
                 <div class="art-sheet clearfix">
                     <header class="art-header">
                         <div class="art-shapes">
-        
                         </div>
-
                         <h1 class="art-headline">
                             <a href="/">Minha Contabilidade</a>
                         </h1>
 
-                        <h2 class="art-slogan"></h2>
+                        <h2 id="slogan" class="art-slogan"></h2>
                         <div id="target"></div>
 
                         <nav class="art-nav">
@@ -216,16 +215,12 @@
                         </div>
                     </div>
                 </div>
-
-               <footer class="art-footer">
-                                    <p class="art-page-footer">
-                                        <span id="art-footnote-links"> Desenvolvedores </span>
-                                        <span id="art-footnote-links"><a href="https://www.linkedin.com/in/wesly-silva∴-4251288b" target="_blank">Wesly Silva</a>,</span>
-                                        <span id="art-footnote-links"><a href="https://www.linkedin.com/in/" target="_blank">Moises Farias</a></span>
-                                    </p>
-                                     <p>Copyright © 2018. All Rights Reserved.</p>
-                </footer>
+               <div id="rodape"></div>     
             </div>
         </div>
+    <script>    
+            verificalogado(); 
+            criaRodape(); 
+    </script>
     </body>
 </html>

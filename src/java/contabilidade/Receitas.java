@@ -5,6 +5,7 @@
  */
 package contabilidade;
 
+import java.util.Calendar;
 import java.util.Objects;
 
 /**
@@ -13,25 +14,42 @@ import java.util.Objects;
  */
 public class Receitas {
     
-    private Conta conta;
-    private String despesa;
+    private Calendar date;
+    private String nome;
     private Categoria categoria;
+    private Conta conta;
     private Double valor;
 
+    public Calendar getDate() {
+        return date;
+    }
+
+    public void setDate(Calendar date) {
+        if(date==null){
+        
+            date = Calendar.getInstance();
+            
+        }else {
+            this.date = date;
+        }
+        
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    
     public Conta getConta() {
         return conta;
     }
 
     public void setConta(Conta conta) {
         this.conta = conta;
-    }
-
-    public String getDespesa() {
-        return despesa;
-    }
-
-    public void setDespesa(String despesa) {
-        this.despesa = despesa;
     }
 
     public Categoria getCategoria() {
@@ -68,7 +86,7 @@ public class Receitas {
             return false;
         }
         final Receitas other = (Receitas) obj;
-        if (!Objects.equals(this.despesa, other.despesa)) {
+        if (!Objects.equals(this.nome, other.nome)) {
             return false;
         }
         if (!Objects.equals(this.conta, other.conta)) {
@@ -82,10 +100,6 @@ public class Receitas {
         }
         return true;
     }
-
-    
-    
-    
     
     
 }
