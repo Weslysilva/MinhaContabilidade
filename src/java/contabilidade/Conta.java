@@ -13,25 +13,54 @@ import java.util.Objects;
  */
 public class Conta {
 
-    
+    Integer codigo;
     String apelido;
     String agencia;
     String conta;
     String banco;
+    Double saldo;
 
+    public Conta(Integer codigo, String apelido, String agencia, String conta, String banco, Double saldo) {
+        this.codigo = codigo;
+        this.apelido = apelido;
+        this.agencia = agencia;
+        this.conta = conta;
+        this.banco = banco;
+        this.saldo = saldo;
+    }
+    
     public Conta(String apelido, String agencia, String conta, String banco) {
         this.apelido = apelido;
         this.agencia = agencia;
         this.conta = conta;
         this.banco = banco;
+        this.saldo = 0.0;
     }
+    
 
     public Conta() {
     
     }
+
+    public Double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(Double saldo) {
+        this.saldo = saldo;
+    }
     
     
 
+    public Integer getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
+    }
+    
+    
     public String getApelido() {
         return apelido;
     }
@@ -89,9 +118,6 @@ public class Conta {
             return false;
         }
         if (!Objects.equals(this.conta, other.conta)) {
-            return false;
-        }
-        if (!Objects.equals(this.banco, other.banco)) {
             return false;
         }
         return true;

@@ -18,26 +18,15 @@ function addConta(){
     $.get("SrvContabilidade/addConta?conta="+JSON.stringify(conta), function( resposta ) {
 
            if(resposta == "true"){
-               
                   alerta("CADASTRO DE CONTA","CONTA CADASTRADA COM SUCESSO!");
                   getListaConta();
-               
            }else {
-               
-               
                alerta("CADASTRO DE CONTA","ESTA CONTA JA FOI CADASTRADA!");
-               
-               
            }
-           
     });
-  
-    
-    
 }
 
 function remConta(cod){
-    
         var conta = ({        
             apelido :   document.getElementById("apelido"+cod).innerHTML,
             agencia:    document.getElementById("agencia"+cod).innerHTML,
@@ -47,7 +36,6 @@ function remConta(cod){
         
         alert (cod+"\n"+conta.apelido+"\n"+conta.agencia+"\n"+conta.conta+"\n"+conta.banco);
         
-    
     $.get("SrvContabilidade/remConta?conta="+JSON.stringify(conta), function( resposta ) {
         
         if(resposta == "true"){
@@ -58,13 +46,9 @@ function remConta(cod){
     
 }
 
-
-
 function getListaConta(){
     
-    
     $.get("SrvContabilidade/getConta", function( resposta ){
-
             
             document.getElementById("tabelaContas").innerHTML = "";
             
@@ -159,10 +143,6 @@ function getListaConta(){
         
         
     });
-    
-        
-    
-    
     
     
 }
