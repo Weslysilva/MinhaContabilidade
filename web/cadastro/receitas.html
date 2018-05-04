@@ -12,6 +12,7 @@
 
 
             <script src="jquery.js"></script>
+            <script src="receitas.js"></script>
             <script src="../script.js"></script>
             <script src="../rodape.js"></script>
             <script src="../script.responsive.js"></script>
@@ -19,6 +20,11 @@
             <script type="text/javascript" src="../login.js"></script>
             <script type="text/javascript" src="../security.js"></script>
             <script type="text/javascript" src="../includeHTML.js"></script>
+            
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 
     </head>
@@ -29,7 +35,8 @@
                     <div class="art-shapes"></div>
                     <h1 class="art-headline"> <a href="/">Minha Contabilidade</a></h1>
                     <h2 id="slogan" class="art-slogan"></h2>
-
+                    <div id="target"></div>
+                    
                     <nav class="art-nav">
                         <ul class="art-hmenu">
                             <li><a href="../dashboard.html" class="">Dashboard</a></li>
@@ -93,10 +100,10 @@
                                                         <p>Categoria<input id="categoria" type="text"></p>
         
                                                         <p>Conta<input id="conta"  type="text"><br></p>
-        
+                                                        
                                                         
                                                         <p><br></p>
-                                                        <button class="art-button" onclick="addConta()">Add</button>
+                                                        <button class="art-button" onclick="addReceita()">Add</button>
                                                         <a href="" class="art-button">Edit</a>&nbsp;
                                                         <a href="" class="art-button">Del</a>&nbsp;
 
@@ -131,18 +138,8 @@
                                                                 
                                                             </tbody>
                                                         </table>
-                                                        <table class="art-article" style="width: 100%; ">
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td style="width: 17%; "><br></td>
-                                                                    <td style="width: 17%; "><br></td>
-                                                                    <td style="width: 17%; "><br></td>
-                                                                    <td style="width: 17%; "><br>
-                                                                    </td><td style="width: 16%; "><br></td>
-                                                                    <td style="width: 16%; "></td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table><br>
+                                                        <div id="tabelaReceita"></div>
+                                                        <br>
                                                     </div>
                                                 </div>
                                             </div>

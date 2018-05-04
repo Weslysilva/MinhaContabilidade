@@ -14,26 +14,30 @@ import java.util.Objects;
  */
 public class Receitas {
     
-    private Calendar date;
+    //private Calendar date;
+    private String date;
     private String nome;
-    private Categoria categoria;
-    private Conta conta;
-    private Double valor;
+    //private Categoria categoria;
+    private String categoria;
+    //private Conta conta;
+    private String conta;
+    //private Double valor;
+    private String valor;
 
-    public Calendar getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Calendar date) {
-        if(date==null){
-        
-            date = Calendar.getInstance();
-            
-        }else {
-            this.date = date;
-        }
-        
-    }
+//    public void setDate(Calendar date) {
+//        if(date==null){
+//        
+//            date = Calendar.getInstance();
+//            
+//        }else {
+//            this.date = date;
+//        }
+//        
+//    }
 
     public String getNome() {
         return nome;
@@ -44,27 +48,27 @@ public class Receitas {
     }
 
     
-    public Conta getConta() {
+    public String getConta() {
         return conta;
     }
 
-    public void setConta(Conta conta) {
+    public void setConta(String conta) {
         this.conta = conta;
     }
 
-    public Categoria getCategoria() {
+    public String getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(Categoria categoria) {
+    public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
 
-    public Double getValor() {
+    public String getValor() {
         return valor;
     }
 
-    public void setValor(Double valor) {
+    public void setValor(String valor) {
         this.valor = valor;
     }
 

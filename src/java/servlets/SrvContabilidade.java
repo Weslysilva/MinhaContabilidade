@@ -7,9 +7,11 @@ package servlets;
 
 import Controller.GerenciaConta;
 import Controller.GerenciaLogin;
+import Controller.GerenciaReceita;
 import Controller.GerenciaUsuario;
 import com.google.gson.Gson;
 import contabilidade.Conta;
+import contabilidade.Receitas;
 import departamentoPessoal.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -91,10 +93,19 @@ public class SrvContabilidade extends HttpServlet {
              Conta conta = new Conta();
              
              if(gc == null){
-             
-                   gc = new GerenciaConta();
-                   super.getServletContext().setAttribute("contabilidade", gc);
+                gc = new GerenciaConta();
+                super.getServletContext().setAttribute("contabilidade", gc);
              }
+             
+             GerenciaReceita gr = (GerenciaReceita) super.getServletContext().getAttribute("receitas");
+             Receitas receita = new Receitas();
+             
+             if (gr == null){
+                 gr = new GerenciaReceita();
+                 super.getServletContext().setAttribute("receitas", gr);
+             }
+             
+             
              
                 System.out.println(action); 
 //-------------//-------------//-------------//-------------//-------------//-------------//-------------//-------------//-------------//-------------//
@@ -125,6 +136,23 @@ public class SrvContabilidade extends HttpServlet {
           conta = gson.fromJson(request.getParameter("conta"), Conta.class);
           
           response.getWriter().print(gc.remove(conta));
+            
+        }else if (action.contains("addReceita")){
+        
+           
+            receita = gson.fromJson(request.getParameter("receita"), Receitas.class);
+            
+            if (gr.validar(receita)) {
+                response.getWriter().print(false);
+            }else {
+               response.getWriter().print(gr.adicionar(receita));
+
+            }
+          
+           
+        }else if (action.contains("getListaReceita")){
+        
+            response.getWriter().print(gson.toJson(gr.getListaReceitas()));
             
         }
     }

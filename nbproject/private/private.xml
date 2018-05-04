@@ -3,12 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/wesly/NetBeansProjects/MORREU_2/web/cadastreSe.html</file>
-            <file>file:/home/wesly/NetBeansProjects/MORREU_2/web/cadastro.html</file>
-            <file>file:/home/wesly/NetBeansProjects/MORREU_2/web/relatorios.html</file>
-            <file>file:/home/wesly/NetBeansProjects/MORREU_2/web/rodape.js</file>
-            <file>file:/home/wesly/NetBeansProjects/MORREU_2/web/dashboard.html</file>
-            <file>file:/home/wesly/NetBeansProjects/MORREU_2/web/login.html</file>
+            <file>file:/home/nostradamus/NetBeansProjects/MinhaContabilidade/web/cadastro/receitas.html</file>
+            <file>file:/home/nostradamus/NetBeansProjects/MinhaContabilidade/web/cadastro/conta.html</file>
+            <file>file:/home/nostradamus/NetBeansProjects/MinhaContabilidade/web/cadastro/receitas.js</file>
+            <file>file:/home/nostradamus/NetBeansProjects/MinhaContabilidade/src/java/servlets/SrvContabilidade.java</file>
         </group>
     </open-files>
 </project-private>
